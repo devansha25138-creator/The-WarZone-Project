@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions | The War-Zone Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS for Missions Page */
+        .missions-hero {
+            background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1920&h=600&fit=crop');
+            height: 50vh;
+            min-height: 400px;
+        }
+        
+        .mission-timeline {
+            position: relative;
+            padding: 3rem 0;
+        }
+        
+        /* Descendent Selector - targets timeline-item within mission-timeline */
+        .mission-timeline .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            width: 45%;
+            border: 2px solid rgba(255, 107, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+        }
+        
+        .timeline-marker {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        /* Pseudo-element for timeline line */
+        .timeline-marker::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            top: 0;
+        }
+        
+        /* Pseudo-element for marker dot */
+        .timeline-marker::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 4px solid var(--background-dark);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mission-difficulty {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .difficulty-easy {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .difficulty-medium {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .difficulty-hard {
+            background: #f44336;
+            color: white;
+        }
+        
+        .mission-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .mission-location {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .mission-description {
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .mission-objectives {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 107, 0, 0.2);
+        }
+        
+        .mission-objectives h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Ordered List styling */
+        .mission-objectives ol {
+            padding-left: 1.5rem;
+            color: #cccccc;
+        }
+        
+        .mission-objectives li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .mission-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>THE WAR-ZONE PROJECT</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guns.html">Weapons</a></li>
+                <li><a href="missions.html" class="active">Missions</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero missions-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Epic Missions</h1>
+            <p>Experience the Greatest Military Operations</p>
+        </div>
+    </header>
+
+    <!-- Missions Timeline -->
+    <section style="background: rgba(10, 10, 10, 0.9); padding: 5rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 3rem; color: var(--primary-color); margin-bottom: 3rem;">Campaign Missions</h2>
+            
+            <div class="mission-timeline">
+                <!-- Mission 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="https://images.unsplash.com/photo-1526554850534-7c78330d5f90?w=600&h=200&fit=crop" alt="Operation Dawn Raid" class="mission-image">
+                        <span class="mission-difficulty difficulty-medium">Medium</span>
+                        <h3 class="mission-title">Operation Dawn Raid</h3>
+                        <p class="mission-location">📍 Al-Mazrah, Middle East</p>
+                        <p class="mission-description">
+                            Infiltrate an enemy compound at dawn to retrieve critical intelligence. 
+                            Stealth is key as you navigate through heavily guarded territories. 
+                            One wrong move could compromise the entire operation.
+                        </p>
+                        <div class="mission-objectives">
+                            <h4>Mission Objectives:</h4>
+                            <ol>
+                                <li>Breach the outer perimeter without detection</li>
+                                <li>Locate and secure the intelligence files</li>
+                                <li>Plant tracker devices on enemy vehicles</li>
+                                <li>Extract safely before reinforcements arrive</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Mission 2 -->
+                <div class="timeline-item">
+                    <div style="width: 45%;"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=200&fit=crop" alt="Blackout Protocol" class="mission-image">
+                        <span class="mission-difficulty difficulty-hard">Hard</span>
+                        <h3 class="mission-title">Blackout Protocol</h3>
+                        <p class="mission-location">📍 Verdansk, Eastern Europe</p>
+                        <p class="mission-description">
+                            A high-stakes urban warfare scenario where you must disable enemy communication towers 
+                            while under constant fire. Navigate through war-torn streets and coordinate with your team 
+                            to complete objectives under extreme pressure.
+                        </p>
+                        <div class="mission-objectives">
+                            <h4>Mission Objectives:</h4>
+                            <ol>
+                                <li>Destroy three communication towers</li>
+                                <li>Defend allied forces during extraction</li>
+                                <li>Neutralize enemy air support</li>
+                                <li>Secure the evacuation zone</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="https://images.unsplash.com/photo-1569550990938-66f9eb8e2da7?w=600&h=200&fit=crop" alt="Arctic Thunder" class="mission-image">
+                        <span class="mission-difficulty difficulty-hard">Hard</span>
+                        <h3 class="mission-title">Arctic Thunder</h3>
+                        <p class="mission-location">📍 Siberia, Russia</p>
+                        <p class="mission-description">
+                            Survive extreme weather conditions while tracking down a high-value target through 
+                            frozen wastelands. Limited visibility and hostile forces make this one of the most 
+                            challenging missions in the campaign.
+                        </p>
+                        <div class="mission-objectives">
+                            <h4>Mission Objectives:</h4>
+                            <ol>
+                                <li>Track the target through blizzard conditions</li>
+                                <li>Infiltrate the mountain fortress</li>
+                                <li>Eliminate or capture the high-value target</li>
+                                <li>Escape via helicopter extraction</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Mission 4 -->
+                <div class="timeline-item">
+                    <div style="width: 45%;"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <img src="https://images.unsplash.com/photo-1621544402532-c0f5afb6ecf1?w=600&h=200&fit=crop" alt="Silent Strike" class="mission-image">
+                        <span class="mission-difficulty difficulty-easy">Easy</span>
+                        <h3 class="mission-title">Silent Strike</h3>
+                        <p class="mission-location">📍 Las Almas, Mexico</p>
+                        <p class="mission-description">
+                            A stealth-focused mission where you must eliminate key targets without raising alarms. 
+                            Use silenced weapons and environmental takedowns to clear the compound undetected.
+                        </p>
+                        <div class="mission-objectives">
+                            <h4>Mission Objectives:</h4>
+                            <ol>
+                                <li>Infiltrate cartel compound at night</li>
+                                <li>Eliminate three cartel leaders silently</li>
+                                <li>Avoid triggering any alarms</li>
+                                <li>Extract without combat engagement</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="https://images.unsplash.com/photo-1526554850534-7c78330d5f90?w=600&h=200&fit=crop&sat=-100" alt="Final Stand" class="mission-image">
+                        <span class="mission-difficulty difficulty-hard">Hard</span>
+                        <h3 class="mission-title">Final Stand</h3>
+                        <p class="mission-location">📍 Washington D.C., USA</p>
+                        <p class="mission-description">
+                            The ultimate showdown as you defend critical infrastructure from enemy assault. 
+                            Command your team in an all-out battle that will determine the fate of the operation. 
+                            This is where heroes are made.
+                        </p>
+                        <div class="mission-objectives">
+                            <h4>Mission Objectives:</h4>
+                            <ol>
+                                <li>Defend the capital building perimeter</li>
+                                <li>Coordinate with air support units</li>
+                                <li>Repel three waves of enemy attacks</li>
+                                <li>Eliminate the enemy commander</li>
+                                <li>Secure victory for allied forces</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 The War-Zone Project. Educational Purpose Only.</p>
+        </div>
+    </footer>
+</body>
+</html>

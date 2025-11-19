@@ -1,0 +1,427 @@
+/* Universal Selector - Resets default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #00ff88;
+    --background-dark: #0a0a0a;
+    --card-bg: rgba(26, 26, 26, 0.9);
+}
+
+/* Body and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-dark);
+    line-height: 1.6;
+    background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1920&h=1080&fit=crop');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container Class */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar - Fixed Positioning */
+.navbar {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation Menu - Inline Block Elements */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Pseudo-classes for hover effects */
+.nav-menu a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.nav-menu a.active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Hero Section - Relative Positioning */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 60px;
+    background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&h=1080&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Absolute Positioning for overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 10, 10, 0.9));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+/* Pseudo-class hover effect */
+.cta-button:hover {
+    background: transparent;
+    color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Grid Layout for Cards */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Box Model demonstration - Card Styling */
+.feature-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    padding: 0;
+    margin: 10px;
+}
+
+/* Pseudo-class for card hover */
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.feature-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    padding: 0 1.5rem 1rem;
+    color: #cccccc;
+}
+
+.card-link {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Media Section */
+.media-section {
+    padding: 5rem 0;
+    background: rgba(26, 26, 26, 0.9);
+}
+
+.media-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.media-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.media-container video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 3px solid var(--primary-color);
+}
+
+.media-container audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Stats Section with Table */
+.stats {
+    padding: 5rem 0;
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.stats h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Table Styling */
+.stats-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stats-table caption {
+    caption-side: top;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.stats-table thead {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 107, 0, 0.2);
+}
+
+.stats-table tbody tr:hover {
+    background: rgba(255, 107, 0, 0.1);
+}
+
+.stats-table tfoot {
+    background: rgba(26, 26, 26, 0.5);
+    font-style: italic;
+}
+
+.stats-table tfoot td {
+    text-align: center;
+    color: #999;
+}
+
+/* Footer */
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 3rem 0 1rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    color: #666;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 107, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design - Media Queries */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .features h2,
+    .media-section h2,
+    .stats h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .stats-table {
+        font-size: 0.9rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+        padding: 0.5rem;
+    }
+}
