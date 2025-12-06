@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,11 @@
             height: 50vh;
             min-height: 400px;
         }
-        
+
         .weapon-category {
             margin: 3rem 0;
         }
-        
+
         .category-title {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -25,13 +26,13 @@
             text-transform: uppercase;
             letter-spacing: 3px;
         }
-        
+
         .weapons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+
         .weapon-item {
             background: var(--card-bg);
             border-radius: 15px;
@@ -39,42 +40,42 @@
             border: 2px solid rgba(255, 107, 0, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .weapon-item:hover {
             border-color: var(--primary-color);
             transform: scale(1.02);
             box-shadow: 0 10px 40px rgba(255, 107, 0, 0.4);
         }
-        
+
         .weapon-image {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
-        
+
         .weapon-info {
             padding: 1.5rem;
         }
-        
+
         .weapon-name {
             font-size: 1.8rem;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .weapon-type {
             color: var(--accent-color);
             font-size: 0.9rem;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
-        
+
         .weapon-description {
             color: #cccccc;
             line-height: 1.6;
             margin-bottom: 1rem;
         }
-        
+
         .weapon-stats {
             display: flex;
             justify-content: space-around;
@@ -82,18 +83,18 @@
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 107, 0, 0.2);
         }
-        
+
         .stat {
             text-align: center;
         }
-        
+
         .stat-label {
             font-size: 0.8rem;
             color: #999;
             display: block;
             margin-bottom: 0.3rem;
         }
-        
+
         .stat-value {
             font-size: 1.2rem;
             color: var(--accent-color);
@@ -101,6 +102,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -127,6 +129,22 @@
         </div>
     </header>
 
+    <div style="text-align: center; margin-top: 3rem;">
+        <button id="gunBtn" style="
+        padding: 10px 20px; 
+        font-size: 1.2rem; 
+        background: #ff6b00; 
+        color: white; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer;
+        font-weight: bold;">
+            Suggest a Weapon
+        </button>
+
+        <p id="gunResult" style="color: #ff6b00; font-size: 1.4rem; margin-top: 1rem;"></p>
+    </div>
+
     <!-- Weapons Content -->
     <section class="weapons-content" style="background: rgba(10, 10, 10, 0.9); padding: 5rem 0;">
         <div class="container">
@@ -135,12 +153,13 @@
                 <h2 class="category-title">Assault Rifles</h2>
                 <div class="weapons-grid">
                     <article class="weapon-item">
-                    <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/m4ai_rowu4d.jpg" alt="M4A1 Assault Rifle" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/m4ai_rowu4d.jpg"
+                            alt="M4A1 Assault Rifle" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">M4A1</h3>
                             <span class="weapon-type">Assault Rifle</span>
                             <p class="weapon-description">
-                                A fully automatic assault rifle with a high rate of fire and excellent accuracy. 
+                                A fully automatic assault rifle with a high rate of fire and excellent accuracy.
                                 Perfect for medium-range engagements and versatile enough for various combat situations.
                             </p>
                             <div class="weapon-stats">
@@ -161,12 +180,13 @@
                     </article>
 
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/ak47_ofrd5z.jpg" alt="AK-47 Assault Rifle" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/ak47_ofrd5z.jpg"
+                            alt="AK-47 Assault Rifle" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">AK-47</h3>
                             <span class="weapon-type">Assault Rifle</span>
                             <p class="weapon-description">
-                                Legendary Soviet rifle known for its reliability and high damage output. 
+                                Legendary Soviet rifle known for its reliability and high damage output.
                                 Trades rate of fire for raw stopping power in every encounter.
                             </p>
                             <div class="weapon-stats">
@@ -187,12 +207,13 @@
                     </article>
 
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/scar_qunyqt.jpg" alt="SCAR-H Assault Rifle" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/scar_qunyqt.jpg"
+                            alt="SCAR-H Assault Rifle" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">SCAR-H</h3>
                             <span class="weapon-type">Assault Rifle</span>
                             <p class="weapon-description">
-                                Heavy-hitting battle rifle with exceptional range and damage. 
+                                Heavy-hitting battle rifle with exceptional range and damage.
                                 Ideal for long-range combat with controlled bursts.
                             </p>
                             <div class="weapon-stats">
@@ -219,12 +240,13 @@
                 <h2 class="category-title">Submachine Guns</h2>
                 <div class="weapons-grid">
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/mp5_idyb86.jpg" alt="MP5 SMG" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/mp5_idyb86.jpg"
+                            alt="MP5 SMG" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">MP5</h3>
                             <span class="weapon-type">Submachine Gun</span>
                             <p class="weapon-description">
-                                Classic SMG with incredible mobility and fire rate. 
+                                Classic SMG with incredible mobility and fire rate.
                                 Dominates in close-quarters combat with its lightning-fast handling.
                             </p>
                             <div class="weapon-stats">
@@ -245,12 +267,13 @@
                     </article>
 
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/ump_a05u2m.jpg" alt="UMP45 SMG" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/ump_a05u2m.jpg"
+                            alt="UMP45 SMG" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">UMP45</h3>
                             <span class="weapon-type">Submachine Gun</span>
                             <p class="weapon-description">
-                                Balanced SMG offering good damage and control. 
+                                Balanced SMG offering good damage and control.
                                 Perfect for aggressive playstyles with manageable recoil.
                             </p>
                             <div class="weapon-stats">
@@ -272,17 +295,18 @@
                 </div>
             </div>
 
-            <!-- Sniper Rifles Category -->
+            <!-- Sniper Rifles Category for guns-->
             <div class="weapon-category">
                 <h2 class="category-title">Sniper Rifles</h2>
                 <div class="weapons-grid">
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/hdr_lqsvtw.jpg" alt="HDR Sniper Rifle" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714786/hdr_lqsvtw.jpg"
+                            alt="HDR Sniper Rifle" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">HDR</h3>
                             <span class="weapon-type">Sniper Rifle</span>
                             <p class="weapon-description">
-                                Heavy-duty sniper rifle with devastating damage. 
+                                Heavy-duty sniper rifle with devastating damage.
                                 One-shot eliminations at extreme ranges with proper placement.
                             </p>
                             <div class="weapon-stats">
@@ -303,12 +327,13 @@
                     </article>
 
                     <article class="weapon-item">
-                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/kar98_ux17go.jpg" alt="Kar98k Sniper Rifle" class="weapon-image">
+                        <img src="https://res.cloudinary.com/dhvcihzvl/image/upload/v1763714785/kar98_ux17go.jpg"
+                            alt="Kar98k Sniper Rifle" class="weapon-image">
                         <div class="weapon-info">
                             <h3 class="weapon-name">Kar98k</h3>
                             <span class="weapon-type">Marksman Rifle</span>
                             <p class="weapon-description">
-                                Classic bolt-action rifle with fast aim-down-sight speed. 
+                                Classic bolt-action rifle with fast aim-down-sight speed.
                                 Rewards precision with quick follow-up shots.
                             </p>
                             <div class="weapon-stats">
@@ -364,5 +389,30 @@
             <p class="copyright">&copy; 2024 The War-Zone Project. Educational Purpose Only.</p>
         </div>
     </footer>
+    <script>
+        let guns = [
+            "M4A1",
+            "AK-47",
+            "SCAR-H",
+            "MP5",
+            "UMP45",
+            "HDR",
+            "Kar98k"
+        ];
+
+        let btn = document.getElementById("gunBtn");
+        let result = document.getElementById("gunResult");
+
+        btn.addEventListener("click", function () {
+            let random = Math.floor(Math.random() * guns.length);
+            result.textContent = "Recommended Weapon: " + guns[random];
+        });
+    </script>
+
 </body>
+
+</html>
+
+</body>
+
 </html>

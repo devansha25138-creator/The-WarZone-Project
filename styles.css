@@ -1,11 +1,11 @@
-/* Universal Selector - Resets default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* CSS Variables for consistent theming */
+
 :root {
     --primary-color: #ff6b00;
     --secondary-color: #1a1a1a;
